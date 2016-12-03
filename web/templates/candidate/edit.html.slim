@@ -1,0 +1,3 @@
+h1 New CRB Board Candidate
+= render "form.html", changeset: @changeset, action: candidate_path(@conn, :update, @candidate)
+= link "Cancel", to: candidate_path(@conn, :index)

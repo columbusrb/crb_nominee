@@ -1,0 +1,24 @@
+section.section
+  .columns
+    .column.is-2.is-offset-5
+      = link "Apply Now!", to: candidate_path(@conn, :new), class: "button is-primary is-large"
+
+section.section
+  .columns.is-multiline
+    = for candidate <- @candidates do
+      .column.is-4
+        a href="#{candidate_path(@conn, :show, candidate)}"
+          .card
+            .card-image
+              figure.image.is-4by3
+                img src="#{CrbNominee.Avatar.url({candidate.avatar, candidate}, :nail)}"
+            .card-content
+              .media
+                .media-left
+                  figure.image.is-32x32
+                    img alt="Image" src="http://placehold.it/64x64"
+                .media-content
+                  p.title.is-5= candidate.name
+                  p.subtitle.is-6
+                    | @#{candidate.twitter}
+              .content= candidate.bio

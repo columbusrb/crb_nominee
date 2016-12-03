@@ -1,0 +1,29 @@
+doctype html
+html lang="en"
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
+    meta charset="utf-8"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1" name="viewport"
+    meta content="" name="description"
+    meta content="" name="author"
+    title Hello CRB Nominee!
+    link href="#{static_path(@conn, "/css/app.css")}" rel="stylesheet" type="text/css"
+
+  body
+    .container
+      p.alert.alert-info role="alert" = get_flash(@conn, :info)
+      p.alert.alert-danger role="alert" = get_flash(@conn, :error)
+
+      section.section
+        .hero-body
+          .container
+            h1.title
+              | Columbus Ruby Brigade 2017 Board Candidates
+            p
+              | Do you love the CRB? Want to help out? We're looking for FOUR dedicated souls that will help us bring CRB to you each and every month! Duties include caring, showing up and having ideas.
+
+      main role="main"
+        = render @view_module, @view_template, assigns
+
+    script src="#{static_path(@conn, "/js/app.js")}"
