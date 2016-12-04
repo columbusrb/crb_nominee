@@ -5,9 +5,15 @@ section.section
         article.tile.is-child.box
           img src="#{CrbNominee.Avatar.url({@candidate.avatar, @candidate}, :thumb)}"
 
-        article.tile.is-child.notification.is-primary
-          p.title= @candidate.name
-          p.subtitle= @candidate.twitter
+        article.tile.is-child.notification
+          .media
+            .media-left
+              figure.image.is-32x32
+                img src="https://twitter.com/#{@candidate.twitter}/profile_image?size=original"
+            .media-content
+              p.title= @candidate.name
+              p.subtitle
+                = link "@#{@candidate.twitter}", to: "https://twitter.com/#{@candidate.twitter}"
 
       .tile.is-parent.is-vertical.is-8
         article.tile.is-child

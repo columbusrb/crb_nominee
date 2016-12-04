@@ -16,9 +16,8 @@ section.section
               .media
                 .media-left
                   figure.image.is-32x32
-                    img alt="Image" src="http://placehold.it/64x64"
+                    img src="https://twitter.com/#{candidate.twitter}/profile_image?size=original"
                 .media-content
                   p.title.is-5= candidate.name
-                  p.subtitle.is-6
-                    | @#{candidate.twitter}
+                  p.subtitle.is-6= "@#{candidate.twitter}"
               .content= candidate.bio

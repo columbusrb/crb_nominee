@@ -27,14 +27,24 @@ defmodule CrbNominee.Candidate do
     |> put_uuid()
     |> cast_attachments(params, [:avatar])
     |> validate_required([:name, :bio, :why, :what, :twitter, :avatar])
+    |> validate_twitter()
   end
 
   defp put_uuid(changeset) do
     case changeset do
       %Ecto.Changeset{ data: %{uuid: nil }} ->
         put_change(changeset, :uuid, UUID.uuid1())
-    _ ->
-       changeset
+      _ ->
+         changeset
+    end
+  end
+
+  defp validate_twitter(changeset) do
+    handle = get_field(changeset, :twitter)
+    if handle && String.starts_with?(handle, "@") do
+      changeset |> change(twitter: String.slice(handle, 1..-1))
+    else
+      changeset
     end
   end
 end
