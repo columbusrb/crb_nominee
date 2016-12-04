@@ -25,4 +25,8 @@
         = textarea f, :why, class: "textarea"
         = error_tag f, :why
       .control
+        = label f, "What do you want to do?", class: "label"
+        = textarea f, :what, class: "textarea"
+        = error_tag f, :what
+      .control
         = submit "Submit", class: "button is-primary"

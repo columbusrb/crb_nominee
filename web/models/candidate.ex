@@ -10,11 +10,12 @@ defmodule CrbNominee.Candidate do
     field :twitter, :string
     field :avatar, CrbNominee.Avatar.Type
     field :uuid, :string
+    field :what, :string
 
     timestamps()
   end
 
-  @required_fields ~w(name bio why twitter)
+  @required_fields ~w(name bio why what twitter)
   @optional_fields ~w()
 
   @required_file_fields ~w(avatar)
@@ -25,7 +26,7 @@ defmodule CrbNominee.Candidate do
     |> cast(params, @required_fields, @optional_fields)
     |> put_uuid()
     |> cast_attachments(params, [:avatar])
-    |> validate_required([:name, :bio, :why, :twitter, :avatar])
+    |> validate_required([:name, :bio, :why, :what, :twitter, :avatar])
   end
 
   defp put_uuid(changeset) do

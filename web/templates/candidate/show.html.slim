@@ -2,10 +2,10 @@ section.section
   .tile.is-ancestor
     .tile
       .tile.is-parent.is-vertical.is-4
-        article.tile.is-child
+        article.tile.is-child.box
           img src="#{CrbNominee.Avatar.url({@candidate.avatar, @candidate}, :thumb)}"
 
-        article.tile.is-child
+        article.tile.is-child.notification.is-primary
           p.title= @candidate.name
           p.subtitle= @candidate.twitter
 
@@ -16,6 +16,10 @@ section.section
 
         article.tile.is-child
           p.title Why would you like to join the CRB Board?
+          .content= @candidate.why
+
+        article.tile.is-child
+          p.title What would you like to do?
           .content= @candidate.why
 
   = link "Back", to: candidate_path(@conn, :index)
