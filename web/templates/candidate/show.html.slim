@@ -1,19 +1,21 @@
 section.section
-  .columns
-    .column.is-4
-      img src="#{CrbNominee.Avatar.url({@candidate.avatar, @candidate}, :thumb)}"
-    .column.is-8
-      p
-        strong Name:
-        = @candidate.name
-      p
-        strong Bio:
-        = @candidate.bio
-      p
-        strong Why:
-        = @candidate.why
-      p
-        strong Twitter:
-        = @candidate.twitter
-      p
-        = link "Back", to: candidate_path(@conn, :index)
+  .tile.is-ancestor
+    .tile
+      .tile.is-parent.is-vertical.is-4
+        article.tile.is-child
+          img src="#{CrbNominee.Avatar.url({@candidate.avatar, @candidate}, :thumb)}"
+
+        article.tile.is-child
+          p.title= @candidate.name
+          p.subtitle= @candidate.twitter
+
+      .tile.is-parent.is-vertical.is-8
+        article.tile.is-child
+          p.title Bio
+          .content= @candidate.bio
+
+        article.tile.is-child
+          p.title Why would you like to join the CRB Board?
+          .content= @candidate.why
+
+  = link "Back", to: candidate_path(@conn, :index)
