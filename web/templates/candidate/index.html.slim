@@ -6,12 +6,12 @@ section.section
 section.section
   .columns.is-multiline
     = for candidate <- @candidates do
-      .column.is-4
+      .column.is-3
         a href="#{candidate_path(@conn, :show, candidate)}"
           .card
             .card-image
               figure.image.is-4by3
-                img src="#{CrbNominee.Avatar.url({candidate.avatar, candidate}, :nail)}"
+                img src="#{CrbNominee.Avatar.url({candidate.avatar, candidate}, :thumb)}"
             .card-content
               .media
                 .media-left
@@ -20,4 +20,4 @@ section.section
                 .media-content
                   p.title.is-5= candidate.name
                   p.subtitle.is-6= "@#{candidate.twitter}"
-              .content= candidate.bio
+              .content= "#{String.slice(candidate.bio, 0..100)}..."
