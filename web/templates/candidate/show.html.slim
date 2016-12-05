@@ -14,6 +14,7 @@ section.section
               p.title= @candidate.name
               p.subtitle
                 = link "@#{@candidate.twitter}", to: "https://twitter.com/#{@candidate.twitter}"
+              p.small= developer_status(@candidate)
 
       .tile.is-parent.is-vertical.is-8
         article.tile.is-child

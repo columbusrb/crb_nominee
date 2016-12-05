@@ -47,6 +47,7 @@ defmodule CrbNominee.Mixfile do
      {:arc_ecto, "~> 0.5.0-rc1"},
      {:uuid, "~> 1.1" },
      {:phoenix_slime, "~> 0.8.0"},
+     {:ex_admin, github: "smpallen99/ex_admin"},
      {:cowboy, "~> 1.0"}]
   end
 

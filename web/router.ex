@@ -1,5 +1,6 @@
 defmodule CrbNominee.Router do
   use CrbNominee.Web, :router
+  use ExAdmin.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -18,6 +19,11 @@ defmodule CrbNominee.Router do
 
     get "/", CandidateController, :index
     resources "/candidates", CandidateController
+  end
+
+  scope "/admin", ExAdmin do
+    pipe_through :browser
+    admin_routes
   end
 
   # Other scopes may use custom stacks.
