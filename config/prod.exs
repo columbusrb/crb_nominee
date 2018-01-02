@@ -22,7 +22,7 @@ config :crb_nominee, CrbNominee.Endpoint,
 config :logger, level: :info
 
 config :arc,
-  virtual_host: true
+  virtual_host: true,
   asset_host: {:system, "ASSET_HOST"}
 
 config :crb_nominee, CrbNominee.Repo,
