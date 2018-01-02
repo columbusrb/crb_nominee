@@ -21,10 +21,6 @@ config :crb_nominee, CrbNominee.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
-config :arc,
-  virtual_host: true,
-  asset_host: {:system, "ASSET_HOST"}
-
 config :crb_nominee, CrbNominee.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
