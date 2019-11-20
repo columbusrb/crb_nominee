@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :crb_nominee, CrbNomineeWeb.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: "murmuring-fjord-61477.herokuapp.com", port: 443],
+  url: [scheme: "https", host: "crb-candidates.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
