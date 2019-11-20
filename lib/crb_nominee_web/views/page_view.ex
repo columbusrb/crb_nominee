@@ -1,3 +1,3 @@
 defmodule CrbNominee.PageView do
-  use CrbNominee.Web, :view
+  use CrbNomineeWeb, :view
 end

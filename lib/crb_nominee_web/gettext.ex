@@ -1,4 +1,4 @@
-defmodule CrbNominee.Gettext do
+defmodule CrbNomineeWeb.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 

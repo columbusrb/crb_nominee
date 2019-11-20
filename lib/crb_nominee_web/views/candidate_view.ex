@@ -1,5 +1,5 @@
-defmodule CrbNominee.CandidateView do
-  use CrbNominee.Web, :view
+defmodule CrbNomineeWeb.CandidateView do
+  use CrbNomineeWeb, :view
 
   def developer_status(candidate) do
     if(candidate.is_dev) do

@@ -1,8 +1,8 @@
-defmodule CrbNominee.CandidateController do
-  use CrbNominee.Web, :controller
+defmodule CrbNomineeWeb.CandidateController do
+  use CrbNomineeWeb, :controller
 
-  alias CrbNominee.Candidate
-  alias CrbNominee.Avatar
+  alias CrbNomineeWeb.Candidate
+  alias CrbNomineeWeb.Avatar
 
   def index(conn, _params) do
     candidates = Repo.all(Candidate)

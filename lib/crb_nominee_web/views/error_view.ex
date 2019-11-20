@@ -1,5 +1,5 @@
-defmodule CrbNominee.ErrorView do
-  use CrbNominee.Web, :view
+defmodule CrbNomineeWeb.ErrorView do
+  use CrbNomineeWeb, :view
 
   def render("404.html", _assigns) do
     "Page not found"

@@ -1,7 +1,8 @@
-defmodule CrbNominee.Endpoint do
+defmodule CrbNomineeWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :crb_nominee
 
-  socket "/socket", CrbNominee.UserSocket
+  socket "/socket", CrbNominee.UserSocket,
+    websocket: true # or a list of options
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -38,5 +39,5 @@ defmodule CrbNominee.Endpoint do
     key: "_crb_nominee_key",
     signing_salt: "I1Upanx/"
 
-  plug CrbNominee.Router
+  plug CrbNomineeWeb.Router
 end

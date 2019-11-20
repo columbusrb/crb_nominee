@@ -11,7 +11,7 @@ defmodule CrbNominee do
       # Start the Ecto repository
       supervisor(CrbNominee.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(CrbNominee.Endpoint, []),
+      supervisor(CrbNomineeWeb.Endpoint, []),
       # Start your own worker by calling: CrbNominee.Worker.start_link(arg1, arg2, arg3)
       # worker(CrbNominee.Worker, [arg1, arg2, arg3]),
     ]

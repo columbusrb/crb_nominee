@@ -1,4 +1,4 @@
-defmodule CrbNominee.ErrorHelpers do
+defmodule CrbNomineeWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """

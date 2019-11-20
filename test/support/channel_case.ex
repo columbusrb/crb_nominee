@@ -1,4 +1,4 @@
-defmodule CrbNominee.ChannelCase do
+defmodule CrbNomineeWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -27,7 +27,7 @@ defmodule CrbNominee.ChannelCase do
 
 
       # The default endpoint for testing
-      @endpoint CrbNominee.Endpoint
+      @endpoint CrbNomineeWeb.Endpoint
     end
   end
 

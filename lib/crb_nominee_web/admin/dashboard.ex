@@ -1,4 +1,4 @@
-defmodule CrbNominee.ExAdmin.Dashboard do
+defmodule CrbNomineeWeb.ExAdmin.Dashboard do
   use ExAdmin.Register
 
   register_page "Dashboard" do

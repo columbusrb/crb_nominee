@@ -1,3 +1,3 @@
 defmodule CrbNominee.PageViewTest do
-  use CrbNominee.ConnCase, async: true
+  use CrbNomineeWeb.ConnCase, async: true
 end
