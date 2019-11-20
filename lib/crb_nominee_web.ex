@@ -29,6 +29,7 @@ defmodule CrbNomineeWeb do
   def controller do
     quote do
       use Phoenix.Controller, namespace: CrbNomineeWeb
+      alias CrbNominee.Repo
 
       import Plug.Conn
       import CrbNomineeWeb.Gettext
@@ -45,6 +46,8 @@ defmodule CrbNomineeWeb do
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
 
+      alias CrbNominee.Repo
+
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
@@ -58,6 +61,7 @@ defmodule CrbNomineeWeb do
   def router do
     quote do
       use Phoenix.Router
+      alias CrbNominee.Repo
       import Plug.Conn
       import Phoenix.Controller
     end
