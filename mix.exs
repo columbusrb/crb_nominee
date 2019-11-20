@@ -32,23 +32,26 @@ defmodule CrbNominee.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.2.1"},
+    [{:phoenix, "~> 1.4"},
      {:phoenix_pubsub, "~> 1.0"},
-     {:phoenix_ecto, "~> 3.0"},
+     {:phoenix_ecto, "~> 4.0"},
+     {:ecto_sql, "~> 3.0"},
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:arc, "~> 0.6.0-rc3"},
-     {:ex_aws, "~> 1.0.0-rc3"},
-     {:hackney, "~> 1.5"},
+     {:arc, "~> 0.11"},
+     {:ex_aws, "~> 2.1"},
+     {:ex_aws_s3, "~> 2.0"},
+     {:hackney, "~> 1.9"},
      {:poison, "~> 2.0"},
-     {:sweet_xml, "~> 0.5"},
-     {:arc_ecto, "~> 0.5.0-rc1"},
+     {:sweet_xml, "~> 0.6"},
+     {:arc_ecto, "~> 0.11"},
      {:uuid, "~> 1.1" },
-     {:phoenix_slime, "~> 0.8.0"},
-     {:ex_admin, github: "smpallen99/ex_admin"},
-     {:cowboy, "~> 1.0"}]
+     {:phoenix_slime, "~> 0.12"},
+     {:ex_admin, github: "sublimecoder/ex_admin"},
+     {:plug, "~> 1.7"},
+     {:plug_cowboy, "~> 2.0"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
@@ -60,6 +63,6 @@ defmodule CrbNominee.Mixfile do
   defp aliases do
     ["ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
      "ecto.reset": ["ecto.drop", "ecto.setup"],
-     "test": ["ecto.create --quiet", "ecto.migrate", "test"]]
+     test: ["ecto.create --quiet", "ecto.migrate", "test"]]
   end
 end

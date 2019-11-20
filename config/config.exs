@@ -10,10 +10,10 @@ config :crb_nominee,
   ecto_repos: [CrbNominee.Repo]
 
 # Configures the endpoint
-config :crb_nominee, CrbNominee.Endpoint,
+config :crb_nominee, CrbNomineeWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "pDH4NY+8jtY+dKtsAFFadUoIMHooDY2lepUDGCpABXgzKNciNEijt9b2TaWH1N3A",
-  render_errors: [view: CrbNominee.ErrorView, accepts: ~w(html json)],
+  render_errors: [view: CrbNomineeWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: CrbNominee.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
@@ -32,14 +32,14 @@ config :phoenix, :template_engines,
 
 config :ex_admin,
   repo: CrbNominee.Repo,
-  module: CrbNominee,
+  module: CrbNomineeWeb,
   theme_selector: [
     {"AdminLte",  ExAdmin.Theme.AdminLte2},
     {"ActiveAdmin", ExAdmin.Theme.ActiveAdmin}
   ],
   modules: [
-    CrbNominee.ExAdmin.Dashboard,
-    CrbNominee.ExAdmin.Candidate
+    CrbNomineeWeb.ExAdmin.Dashboard,
+    CrbNomineeWeb.ExAdmin.Candidate
   ]
 
 # Import environment specific config. This must remain at the bottom

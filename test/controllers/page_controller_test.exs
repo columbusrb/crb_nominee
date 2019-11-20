@@ -1,5 +1,5 @@
 defmodule CrbNominee.PageControllerTest do
-  use CrbNominee.ConnCase
+  use CrbNomineeWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

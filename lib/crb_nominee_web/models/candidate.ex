@@ -1,5 +1,5 @@
-defmodule CrbNominee.Candidate do
-  use CrbNominee.Web, :model
+defmodule CrbNomineeWeb.Candidate do
+  use CrbNomineeWeb, :model
   use Arc.Ecto.Schema
   require UUID
 
@@ -16,11 +16,11 @@ defmodule CrbNominee.Candidate do
     timestamps()
   end
 
-  @required_fields ~w(name bio why what twitter is_dev)
-  @optional_fields ~w()
+  @required_fields ~w(name bio why what twitter is_dev)a
+  @optional_fields ~w()a
 
-  @required_file_fields ~w(avatar)
-  @optional_file_fields ~w()
+  @required_file_fields ~w(avatar)a
+  @optional_file_fields ~w()a
 
   def changeset(model, params \\ %{}) do
     model

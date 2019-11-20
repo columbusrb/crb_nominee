@@ -1,7 +1,7 @@
 defmodule CrbNominee.CandidateControllerTest do
-  use CrbNominee.ConnCase
+  use CrbNomineeWeb.ConnCase
 
-  alias CrbNominee.Candidate
+  alias CrbNomineeWeb.Candidate
   @valid_attrs %{bio: "some content", id: 42, name: "some content", twitter: "some content", why: "some content"}
   @invalid_attrs %{}
 

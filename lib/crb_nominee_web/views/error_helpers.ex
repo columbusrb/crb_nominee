@@ -1,4 +1,4 @@
-defmodule CrbNominee.ErrorHelpers do
+defmodule CrbNomineeWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule CrbNominee.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(CrbNominee.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(CrbNomineeWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(CrbNominee.Gettext, "errors", msg, opts)
+      Gettext.dgettext(CrbNomineeWeb.Gettext, "errors", msg, opts)
     end
   end
 end

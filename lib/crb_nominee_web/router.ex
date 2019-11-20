@@ -1,5 +1,5 @@
-defmodule CrbNominee.Router do
-  use CrbNominee.Web, :router
+defmodule CrbNomineeWeb.Router do
+  use CrbNomineeWeb, :router
   use ExAdmin.Router
 
   pipeline :browser do
@@ -14,7 +14,7 @@ defmodule CrbNominee.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", CrbNominee do
+  scope "/", CrbNomineeWeb do
     pipe_through :browser # Use the default browser stack
 
     get "/", CandidateController, :index

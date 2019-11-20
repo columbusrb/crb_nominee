@@ -1,4 +1,4 @@
-defmodule CrbNominee.ConnCase do
+defmodule CrbNomineeWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -25,10 +25,10 @@ defmodule CrbNominee.ConnCase do
       import Ecto.Changeset
       import Ecto.Query
 
-      import CrbNominee.Router.Helpers
+      import CrbNomineeWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint CrbNominee.Endpoint
+      @endpoint CrbNomineeWeb.Endpoint
     end
   end
 
